@@ -934,14 +934,15 @@
         // `id` can be a Number or a String in the default radix (16)
         newShare: function (id, shares) {
             var share;
+            var hexid;
 
-            if (id && typeof id === "string") {
-                id = parseInt(id, config.radix);
+            if (id && typeof id === "number") {
+                hexid = id.toString(config.radix);
             }
 
             if (id && shares && shares[0]) {
                 share = this.extractShareComponents(shares[0]);
-                return constructPublicShareString(share.bits, id, this.combine(shares, id));
+                return constructPublicShareString(share.bits, hexid, this.combine(shares, id));
             }
 
             throw new Error("Invalid 'id' or 'shares' Array argument to newShare().");
