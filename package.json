@@ -10,7 +10,7 @@
     "devDependencies": {
         "grunt": "^1.0",
         "grunt-check-modules": "^1.0.0",
-        "grunt-contrib-uglify": "^4.0",
+        "grunt-contrib-uglify": "^5.0",
         "grunt-contrib-watch": "^1.1",
         "grunt-jasmine-nodejs": "^1.6",
         "jasmine": "^3.4.0",
